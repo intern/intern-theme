@@ -1,0 +1,15 @@
+; $Id: garland.info,v 1.10 2010/11/07 00:27:20 dries Exp $
+name = Intern
+description = A beautiful layouts.
+package = Intern
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = style.css
+stylesheets[print][] = print.css
+
+; Information added by drupal.org packaging script on 2011-01-05
+version = "7.0"
+project = "Intern"
+datestamp = "1394208756"
+
