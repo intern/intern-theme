@@ -97,8 +97,12 @@ pre {
     line-height: 28px;
     margin: 10px 0;
 }
-
-
+#content .content ul.pager {
+    font-size: 12px;
+}
+#content .content ul.pager li.first {
+    margin: 0;
+}
 .region-content {
     padding: 10px 20px 20px;
 }

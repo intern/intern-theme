@@ -1,5 +1,5 @@
 <div id="item-<?php print $node->nid; ?>" class="blog-item <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <h5><?php echo $date; ?></h5>
+  <h5><?php print date('D, m, Y', $node->created); ?></h5>
   <?php print $user_picture; ?>
 
   <?php print render($title_prefix); ?>

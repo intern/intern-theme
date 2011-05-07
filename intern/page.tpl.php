@@ -33,6 +33,3 @@
     </div>
 </div>
 
-<?php if($feed_icons): ?>
-    <?php print $feed_icons; ?>
-<?php endif; ?>
