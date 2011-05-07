@@ -1,9 +1,10 @@
 <div class="bg_wrapper"><div></div></div>
 <div class="content_wrapper">
     <div id="header" class="w_600 clear">
-        <?php if ($logo): ?>
+        <?php if ($logo && false): ?>
         <img src="<?php print $logo; ?>" class="fr" alt="<?php print $site_name; ?>" title="<?php print $site_name; ?>" />
         <?php endif; ?>
+        <h2><?php print l($site_name, '<front>'); ?></h2>
     </div>
     <?php if ($main_menu || $secondary_menu): ?>
     <div id="navigation" class="w_600 clear">

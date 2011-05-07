@@ -1,3 +1,6 @@
+/**
+ *  Common style
+ */
 body {
     padding: 0;
     margin: 0;
@@ -17,11 +20,21 @@ a {
     color: #0074BD;
     text-decoration: none;
 }
+
 a, p, h1, h2, h3, h4, h5, ul, li {
     padding: 0;
     margin: 0;
 }
+hr.separate {
+    height: 1px;
+    border: 0;
+    border-top: 1px #999 dotted;
+    margin: 25px 0;
+}
 
+/**
+  * all coding
+  */
 quote, code {
     margin: .5em 0;
 }
@@ -36,12 +49,18 @@ pre {
     padding-left: 8px;
     border-left: 3px #789 solid;
 }
+/** main width **/
+.w_600 {
+    margin: 0 auto;
+    width: 600px;
+}
 
 
 
 
-
-
+/**
+ * background layout.
+ */
 .bg_wrapper {
     position: fixed;
     width: 100%;
@@ -55,9 +74,10 @@ pre {
     background: url(./images/bg.jpg) no-repeat center center;
 }
 
-#header {
-    height: 100px;
-}
+
+/**
+ * content layout
+ */
 .content_wrapper {
     position: absolute;
     top: 0;
@@ -67,11 +87,27 @@ pre {
     width: 100%;
 }
 
-.w_600 {
-    margin: 0 auto;
-    width: 600px;
+
+/**
+ * header layout, eg: logo
+ */
+#header {
+    height: 50px;
+    line-height: 50px;
+}
+#header h2 {
+    text-align: right;
+}
+#header h2 a {
+    color: #fff;
+    font-size: 45px;
+    padding-right: 10px;
 }
 
+
+/**
+ * top navigation
+ */
 #navigation ul.links, #navigation ul.links li{
     line-height: 35px;
     font-size: 20px;
@@ -84,6 +120,9 @@ pre {
     color: #0099ff;
 }
 
+/**
+ * node layout
+ */
 #content {
     border: 5px solid #888;
     background-color: #eee;
@@ -91,19 +130,24 @@ pre {
     filter: alpha(opacity=90);
     min-height: 600px;
 }
-
+#content .messages {
+    font-size: 14px;
+}
 #content .content {
     font-size: 14px;
     line-height: 28px;
     margin: 10px 0;
 }
-#content .content ul.pager {
-    font-size: 12px;
+
+#content .content .item-list .pager li {
+    padding: 0;
+    margin: 0 0 0.25em 1em;
 }
 #content .content ul.pager li.first {
     margin: 0;
 }
-.region-content {
+
+#content .region-content {
     padding: 10px 20px 20px;
 }
 
@@ -130,23 +174,23 @@ pre {
     color: #3388EE;
 }
 
-.blog-item ul.links {
+#content .blog-item ul.links {
     width: 100%;
     margin: 10px 0;
     height: 30px;
     line-height: 30px;
     display: block;
 }
-.blog-item ul.links li {
+#content .blog-item ul.links a:hover {
+    text-decoration: none;
+    margin-bottom: 1px;
+    border-bottom: 2px #ccc solid;
+}
+
+#content .blog-item ul.links li {
     float: right;
 }
 
-hr.separate {
-    height: 1px;
-    border: 0;
-    border-top: 1px #999 dotted;
-    margin: 25px 0;
-}
 
 
 #comments h2 {
@@ -160,7 +204,29 @@ hr.separate {
     opacity: .9;
     filter: alpha(opacity=90);
     margin: 20px 0 0 625px;
-    width: 150px;
+    width: 100px;
+}
+#content .sidebar ul.links li {
+    margin: 5px 0;
+}
+#content .sidebar ul.links a{
+    display: block;
+    width: 68px;
+    height: 20px;
+    padding-left: 32px;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    font-size: 14px;
+    color: #3F476D;
+}
+#content .sidebar ul.links a.feed-icon {
+    background-image: url(./images/icons/feed.png);
+}
+#content .sidebar ul.links a.qq {
+    background-image: url(./images/icons/qq.png);
+}
+#content .sidebar ul.links a.sina {
+    background-image: url(./images/icons/sina.png);
 }
 .region-sidebar-second .block {
     border-bottom: 1px #999 dotted;
@@ -185,6 +251,9 @@ hr.separate {
     padding: 0;
 }
 
+/**
+ * footer layout
+ */
 #footer {
     color: #A1A1A1;
     font: bold 11px Arial,Helvetica,sans-serif;

@@ -31,14 +31,45 @@ function intern_preprocess_node(&$vars) {
  * Override or insert variables into the node template.
  */
 function intern_preprocess_page(&$vars) {
-  /*
   $vars['sidebar'] = <<<html
 <a class="share facebook" target="_blank" href="http://www.facebook.com/fluidbyte">facebook</a>
 <a class="share twitter" target="_blank" href="http://www.twitter.com/lan_chi">twitter</a>
 <a class="share rss" target="_blank" href="http://www.iforeach,com/rss.xml">rss feed</a>
 html;
-   */
+  $vars['sidebar'] = sidebar_helper();
 }
+
+function sidebar_helper() {
+  $_items = array(
+      'links' => array(
+          array(
+              'title' => '订阅 RSS',
+              'href'  => 'rss.xml',
+              'attributes' => array(
+                  'class' => 'feed-icon'
+              )
+          ),
+          array(
+              'title' => '腾讯微博',
+              'href'  => 'http://t.qq.com/iforeach',
+              'attributes' => array(
+                  'class' => 'qq',
+                  'target'=> '_blank'
+              )
+          ),
+          array(
+              'title' => '新浪微博',
+              'href'  => 'http://weibo.com/2123827361',
+              'attributes' => array(
+                  'class' => 'sina',
+                  'target'=> '_blank'
+              )
+          )
+      )
+  );
+  return theme('links', $_items);
+}
+
 
 /**
  * Override or insert variables into the comment template.
