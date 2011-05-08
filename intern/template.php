@@ -31,11 +31,6 @@ function intern_preprocess_node(&$vars) {
  * Override or insert variables into the node template.
  */
 function intern_preprocess_page(&$vars) {
-  $vars['sidebar'] = <<<html
-<a class="share facebook" target="_blank" href="http://www.facebook.com/fluidbyte">facebook</a>
-<a class="share twitter" target="_blank" href="http://www.twitter.com/lan_chi">twitter</a>
-<a class="share rss" target="_blank" href="http://www.iforeach,com/rss.xml">rss feed</a>
-html;
   $vars['sidebar'] = sidebar_helper();
 }
 
